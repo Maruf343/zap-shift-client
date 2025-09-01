@@ -1,0 +1,8 @@
+.serviceCard-bg{
+    background-color: #fff;
+    color: #000;
+    transition: .5s all;
+}
+.serviceCard-bg:hover{
+    background-color: #CAEB66;
+}
