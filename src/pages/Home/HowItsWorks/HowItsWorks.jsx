@@ -39,7 +39,7 @@ const HowItWorks = () => {
             const Icon = item.icon;
             return (
               <div key={index} className="flex bg-white rounded-2xl p-6 flex-col ">
-                <div className="text-4xl text-primary mb-3">
+                <div className="text-4xl text-gray-400 mb-3">
                   <Icon />
                 </div>
                 <h3 className="font-semibold text-black  mb-2">{item.title}</h3>

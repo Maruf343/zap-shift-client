@@ -47,8 +47,8 @@ const Services = () => {
     <section className="py-12 services-bg rounded-2xl my-7">
       <div className="max-w-6xl mx-auto px-4 text-center">
         {/* Section Heading */}
-        <h2 className="text-3xl font-bold mb-4">Our Services</h2>
-        <p className="max-w-2xl mx-auto mb-10">
+        <h2 className="text-3xl text-white font-bold mb-4">Our Services</h2>
+        <p className="max-w-2xl mx-auto text-gray-400 mb-10">
           Enjoy fast, reliable parcel delivery with real-time tracking and zero hassle. 
           From personal packages to business shipments — we deliver on time, every time.
         </p>
