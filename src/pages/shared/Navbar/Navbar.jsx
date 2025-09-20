@@ -1,11 +1,14 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import ProFastLogo from "../proFastLogo/ProFastLogo";
 import './Navbar.css'
+import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
+  const {user,logOut} = useAuth()
     const navItems = <>
         <li> <NavLink to="/">Home</NavLink></li>
+        <li> <NavLink to="sendParcel">Send Parcel</NavLink></li>
         <li><NavLink to="coverage">Coverage</NavLink></li>
         <li><NavLink to="about">About-us</NavLink></li>
     </>
@@ -46,8 +49,19 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <button className="btn btn-outline  mr-4">Sign In</button>
-          <a className="btn bg-color text-black bg-colors border-0">Button</a>
+          {
+            user?.email && <p className="mr-2">{user.email}</p>
+          }
+          {
+            user?.photoURL  && <img className="w-8 h-8 rounded-full mr-2 border" src={user.photoURL } alt="" />
+          }
+          {
+            user ? 
+            (<button className="btn btn-primary text-black  mr-4" onClick={logOut}>LogOut</button>)
+            :
+            (<Link className="btn btn-primary text-black  mr-4" to="/login">Login</Link>)
+          }
+          
         </div>
       </div>
     </div>
